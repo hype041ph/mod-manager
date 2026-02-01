@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Mod Manager</title>
+    <!-- Fonts estilo Farming Simulator -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌾 Farming Mod Manager</h1>
+        <p>Gerencie seus mods de fazenda com estilo!</p>
+    </header>
+
+    <section class="upload-section">
+        <!-- Input file escondido -->
+        <input type="file" id="modUpload" hidden>
+        <!-- Label estilizado -->
+        <label for="modUpload" class="file-btn" id="fileLabel">Escolher Arquivo</label>
+        <button id="uploadBtn">Upload Mod</button>
+    </section>
+
+    <section class="mods-section">
+        <h2>Mods Disponíveis</h2>
+        <div id="modList" class="mod-cards"></div>
+    </section>
+
+    <footer>
+        <p>© 2026 Farming Mod Manager</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
