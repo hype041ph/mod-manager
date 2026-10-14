@@ -1,37 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farming Mod Manager</title>
-    <!-- Fonts estilo Farming Simulator -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160b12">
+  <meta name="description" content="Uma pequena história de amor, feita por Pedro para Luana.">
+  <title>Pedro & Luana — Nossa História</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>🌾 Farming Mod Manager</h1>
-        <p>Gerencie seus mods de fazenda com estilo!</p>
-    </header>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
 
-    <section class="upload-section">
-        <!-- Input file escondido -->
-        <input type="file" id="modUpload" hidden>
-        <!-- Label estilizado -->
-        <label for="modUpload" class="file-btn" id="fileLabel">Escolher Arquivo</label>
-        <button id="uploadBtn">Upload Mod</button>
+  <div class="surprise-gate" id="surpriseGate" role="dialog" aria-modal="true" aria-labelledby="surpriseTitle">
+    <div class="gate-card">
+      <div class="gate-heart" aria-hidden="true">♥</div>
+      <p class="gate-eyebrow">UMA SURPRESA FEITA COM AMOR</p>
+      <h2 id="surpriseTitle">Luana, essa é<br><em>para você.</em></h2>
+      <p>Prepare o coração… tem uma história aqui que o Pedro fez especialmente para você.</p>
+      <button class="gate-button" id="startSurprise" type="button">Abrir minha surpresa <span>♥</span></button>
+      <span class="gate-footnote">com a nossa música: Mirrors · Justin Timberlake</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Pedro e Luana, início"><span class="brand-heart">♥</span> P <span class="brand-line">×</span> L</a>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Tocar Mirrors, de Justin Timberlake">
+      <span class="music-dot"></span><span id="musicLabel">Mirrors · nossa trilha</span><span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span></span> UMA HISTÓRIA QUE É SÓ NOSSA <span></span></p>
+        <h1>Pedro <em>&</em><br>Luana</h1>
+        <p class="hero-subtitle" contenteditable="true" spellcheck="false">Se eu pudesse escolher de novo, ainda seria você.</p>
+        <div class="hero-date"><span class="date-line"></span><span>DESDE 15.07.2026 · ÀS 20H</span><span class="date-line"></span></div>
+        <button class="primary-button" id="openStory" type="button">
+          <span>Entrar na nossa história</span><span class="button-arrow">↓</span>
+        </button>
+        <p class="tiny-note">feito com carinho, para você ♥</p>
+      </div>
+      <div class="hero-bottom"><span>ROLE PARA DESCOBRIR</span><span class="scroll-line"></span></div>
     </section>
 
-    <section class="mods-section">
-        <h2>Mods Disponíveis</h2>
-        <div id="modList" class="mod-cards"></div>
+    <section class="intro section-wrap" id="carta">
+      <div class="section-kicker reveal">01 — UMA CARTA PARA VOCÊ</div>
+      <div class="letter-card reveal">
+        <div class="letter-mark">“</div>
+        <p class="letter-overline">PARA A MINHA PESSOA FAVORITA</p>
+        <h2>Luana, <em>meu amor.</em></h2>
+        <div class="editable-copy" contenteditable="true" spellcheck="false">
+          <p>Às vezes eu tento encontrar as palavras certas para explicar o que você significa para mim, mas parece que nenhuma é grande o bastante.</p>
+          <p>Desde que você chegou, até os momentos simples ganharam outro significado. Gosto das nossas brincadeiras, dos nossos abraços, das nossas fotos e de tudo aquilo que só nós dois entendemos.</p>
+          <p>Essa página é um pedacinho da nossa história — e um lembrete de que eu quero continuar escrevendo os próximos capítulos com você.</p>
+        </div>
+        <p class="signature" contenteditable="true" spellcheck="false">Com amor, Pedro. <span>♥</span></p>
+        <span class="letter-stamp">P + L</span>
+      </div>
     </section>
 
-    <footer>
-        <p>by:hype041</p>
-    </footer>
+    <section class="timeline-section section-wrap" id="trajetoria">
+      <div class="section-kicker reveal">02 — CAPÍTULOS DA NOSSA HISTÓRIA</div>
+      <div class="section-heading reveal">
+        <h2>Não é só sobre datas.<br><em>É sobre nós.</em></h2>
+        <p>Pequenos momentos que, juntos, viraram algo enorme.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span>01</span></div>
+          <div class="timeline-card">
+            <p class="timeline-date" contenteditable="true" spellcheck="false">O começo de tudo</p>
+            <h3 contenteditable="true" spellcheck="false">Quando nossos caminhos se encontraram</h3>
+            <p contenteditable="true" spellcheck="false">Foi assim que tudo começou. Um encontro, conversas e a sensação boa de querer conhecer cada vez mais você. <em>Substitua este texto pela lembrança de vocês.</em></p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span>02</span></div>
+          <div class="timeline-card">
+            <p class="timeline-date" contenteditable="true" spellcheck="false">15 de julho de 2026, às 20h</p>
+            <h3 contenteditable="true" spellcheck="false">O nosso sim</h3>
+            <p contenteditable="true" spellcheck="false">O dia em que começamos oficialmente a escrever essa história. Uma data que ganhou um lugar especial no meu coração.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span>03</span></div>
+          <div class="timeline-card">
+            <p class="timeline-date" contenteditable="true" spellcheck="false">Nossos dias favoritos</p>
+            <h3 contenteditable="true" spellcheck="false">O amor mora nos detalhes</h3>
+            <p contenteditable="true" spellcheck="false">Nas risadas sem motivo, nas fotos espontâneas, nos beijos demorados e até nas pequenas manias que fazem a gente ser a gente.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"><span>04</span></div>
+          <div class="timeline-card">
+            <p class="timeline-date" contenteditable="true" spellcheck="false">Daqui para frente</p>
+            <h3 contenteditable="true" spellcheck="false">Ainda temos tanto para viver</h3>
+            <p contenteditable="true" spellcheck="false">Mais lugares para conhecer, memórias para guardar, sonhos para realizar e capítulos para escrever. Quero descobrir tudo isso ao seu lado.</p>
+          </div>
+        </article>
+      </div>
+      <p class="edit-hint">✦ Dica: toque nos textos para editar e personalizar a história.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="gallery-section section-wrap" id="memorias">
+      <div class="section-kicker reveal">03 — NOSSO PEQUENO UNIVERSO</div>
+      <div class="section-heading reveal">
+        <h2>Memórias que<br><em>moram em mim.</em></h2>
+        <p>Cada foto guarda um pedacinho do que somos.</p>
+      </div>
+      <div class="photo-grid">
+        <button class="photo photo-tall reveal" data-photo="fotos/foto-01.jpeg" aria-label="Ampliar foto 1"><img src="fotos/foto-01.jpeg" alt="Pedro e Luana juntos" loading="lazy"><span class="photo-caption">meu lugar favorito ♥</span></button>
+        <button class="photo reveal" data-photo="fotos/foto-02.jpeg" aria-label="Ampliar foto 2"><img src="fotos/foto-02.jpeg" alt="Uma memória do casal" loading="lazy"><span class="photo-caption">nós dois</span></button>
+        <button class="photo reveal" data-photo="fotos/foto-03.jpeg" aria-label="Ampliar foto 3"><img src="fotos/foto-03.jpeg" alt="Uma lembrança especial" loading="lazy"><span class="photo-caption">do nosso jeitinho</span></button>
+        <button class="photo photo-wide reveal" data-photo="fotos/foto-04.jpeg" aria-label="Ampliar foto 4"><img src="fotos/foto-04.jpeg" alt="Pedro e Luana compartilhando um momento" loading="lazy"><span class="photo-caption">um instante, mil sentimentos</span></button>
+        <button class="photo reveal" data-photo="fotos/foto-05.jpeg" aria-label="Ampliar foto 5"><img src="fotos/foto-05.jpeg" alt="Retrato do casal" loading="lazy"><span class="photo-caption">minha paz</span></button>
+        <button class="photo reveal" data-photo="fotos/foto-06.jpeg" aria-label="Ampliar foto 6"><img src="fotos/foto-06.jpeg" alt="Uma foto divertida do casal" loading="lazy"><span class="photo-caption">as nossas besteiras</span></button>
+        <button class="photo photo-tall reveal" data-photo="fotos/foto-07.jpeg" aria-label="Ampliar foto 7"><img src="fotos/foto-07.jpeg" alt="Pedro e Luana abraçados" loading="lazy"><span class="photo-caption">sempre pertinho</span></button>
+        <button class="photo reveal" data-photo="fotos/foto-08.jpeg" aria-label="Ampliar foto 8"><img src="fotos/foto-08.jpeg" alt="Um momento especial dos dois" loading="lazy"><span class="photo-caption">só a gente entende</span></button>
+        <button class="photo reveal" data-photo="fotos/foto-09.jpeg" aria-label="Ampliar foto 9"><img src="fotos/foto-09.jpeg" alt="Uma lembrança do casal" loading="lazy"><span class="photo-caption">meu sorriso favorito</span></button>
+        <button class="photo photo-wide reveal" data-photo="fotos/foto-10.jpeg" aria-label="Ampliar foto 10"><img src="fotos/foto-10.jpeg" alt="Mais uma lembrança de Pedro e Luana" loading="lazy"><span class="photo-caption">e que venham muitas outras</span></button>
+      </div>
+    </section>
+
+    <section class="counter-section">
+      <div class="counter-inner reveal">
+        <span class="counter-heart">♥</span>
+        <p class="section-kicker">DESDE O NOSSO SIM</p>
+        <h2>O tempo passa.<br><em>Meu carinho cresce.</em></h2>
+        <div class="counter-grid">
+          <div><strong id="days">000</strong><span>DIAS</span></div>
+          <div><strong id="hours">00</strong><span>HORAS</span></div>
+          <div><strong id="minutes">00</strong><span>MINUTOS</span></div>
+          <div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
+        </div>
+        <p class="counter-caption">e ainda estamos só no começo da nossa história.</p>
+      </div>
+    </section>
+
+    <section class="music-section section-wrap" id="trilha-sonora">
+      <div class="section-kicker reveal">04 — A NOSSA TRILHA SONORA</div>
+      <div class="music-card reveal">
+        <div class="music-copy">
+          <span class="music-note" aria-hidden="true">♫</span>
+          <div>
+            <p class="music-overline">PEDRO &amp; LUANA</p>
+            <h2>Mirrors <em>—</em></h2>
+            <p>Justin Timberlake</p>
+          </div>
+        </div>
+        <p class="music-description">Uma música para lembrar que, entre tantas pessoas no mundo, a gente encontrou alguém que parece refletir um pedacinho da nossa própria alma.</p>
+        <div class="music-player-wrap">
+          <iframe id="songPlayer" title="Mirrors, de Justin Timberlake — vídeo oficial" src="https://www.youtube-nocookie.com/embed/uuZE_IRwLNI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="music-help">Toque no vídeo para ouvir. A reprodução pode depender da conexão e das configurações do navegador.</p>
+      </div>
+    </section>
+
+    <section class="final-section section-wrap" id="final">
+      <div class="final-card reveal">
+        <div class="final-sparkle">✦</div>
+        <p class="section-kicker">05 — PARA SEMPRE, NO NOSSO TEMPO</p>
+        <h2>Se a vida fosse um filme,<br><em>você seria minha cena favorita.</em></h2>
+        <p contenteditable="true" spellcheck="false">Obrigado por fazer parte da minha vida, Luana. Que a gente nunca perca a vontade de cuidar um do outro, rir junto e escolher ficar.</p>
+        <button class="love-button" id="loveButton" type="button">Aperte se você me ama <span>♥</span></button>
+        <p class="love-response" id="loveResponse" aria-live="polite"></p>
+      </div>
+      <footer><a class="brand" href="#inicio"><span class="brand-heart">♥</span> P <span class="brand-line">×</span> L</a><p>Feito por Pedro, com amor para Luana.</p><a href="#inicio" class="back-top">VOLTAR AO INÍCIO ↑</a></footer>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fechar foto">×</button>
+    <button class="lightbox-arrow prev" id="photoPrev" type="button" aria-label="Foto anterior">‹</button>
+    <img id="lightboxImage" src="" alt="Foto ampliada de Pedro e Luana">
+    <button class="lightbox-arrow next" id="photoNext" type="button" aria-label="Próxima foto">›</button>
+    <p id="lightboxCount"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
